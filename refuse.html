@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refuse waste collection</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-45deg);
+            animation: shineEffect 4s infinite linear;
+        }
+
+        @keyframes shineEffect {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 91, 181, 0.9);
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #0073e6;
+            background: #f4f4f9;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #0073e6;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 91, 181, 0.9);
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #005bb5, #0073e6);
+        }
+
+        .social-media a i {
+            line-height: 30px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Refuse Waste Collection</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sewage.html">Sewage Waste Collection</a>
+        <a href="incineration.html">Incineration (Disposal)</a>
+        <a href="refuse.html">Refuse Waste Collection</a>
+    </nav>
+<div class="container">
+    <div class="section">
+        <h2>Refuse Waste Collection Services</h2>
+        <p>Hyprop provides reliable and efficient refuse waste collection services designed to ensure clean and healthy environments for communities, businesses, and industries. With a focus on professionalism and sustainability, we aim to make waste collection easy and hassle-free for our clients.</p>
+        <img src="images/background7.jpg" alt="Sewage Waste Collection">
+    </div>
+
+    <div class="section">
+        <h2>What is Refuse Waste Collection</h2>
+        <p>Refuse waste collection involves the regular collection and transportation of general solid waste from homes, businesses, and public spaces to designated waste management facilities. This service plays a critical role in maintaining public health, cleanliness, and environmental well-being.</p>
+		<h2>Our Refuse Waste Collection Approach</h2>
+<h3>1. Comprehensive Coverage</h3>
+<p>Hyprop offers waste collection services tailored to meet the needs of residential areas, commercial properties, and industrial facilities. We ensure that all waste, including municipal solid waste, non-recyclable items, and general household refuse, is safely collected and managed.</p>
+<h3>2. Scheduled and Flexible Collections</h3>
+<p>Our refuse collection is designed to fit seamlessly into your schedule, with regular pick-up services to avoid waste build-up. For businesses and industries with fluctuating waste needs, we provide customized collection schedules to ensure consistent and timely service.</p>
+<h3>3. Modern Equipment and Fleet</h3>
+<p>We operate a fleet of specialized collection vehicles equipped with efficient waste compaction systems, ensuring maximum capacity and minimal environmental impact during transportation. Our vehicles are maintained to the highest standards to guarantee safety and reliability. </p>
+<h3>4. Waste Segregation and Management</h3>
+<p>Hyprop encourages waste segregation at the source, helping clients separate recyclable, hazardous, and non-recyclable materials before collection. Segregated waste is then directed to the appropriate treatment facilities, reducing the burden on landfills and maximizing recycling potential.</p>
+<h3>5. Compliance and Safety</h3>
+<p>All refuse collection operations comply with local regulations and environmental standards to ensure responsible waste disposal. Our team is trained in safe handling practices to minimize risks to the environment and public health.</p>
+        <img src="images/r1.jpg" alt="Advanced Technologies">
+    </div>
+
+    <div class="section">
+        <h2>Why Choose Hyprop for Refuse Waste Collection?</h2>
+<h3>1. Professionalism and Reliability</h3>
+<p>Hyprop is known for its punctuality and consistent service delivery, ensuring that waste is collected on time, every time. Our team is skilled, experienced, and dedicated to providing top-quality service.</p>
+<h3>2. Commitment to Sustainability</h3>
+<p>We prioritize eco-friendly practices, including reducing landfill contributions by diverting waste to recycling or recovery facilities whenever possible. Our efficient operations help minimize the carbon footprint associated with waste collection and transportation.</p>
+<h3>3. Affordable and Scalable Solutions</h3>
+<p>Whether you’re a homeowner, small business owner, or large corporation, Hyprop offers cost-effective waste collection services that scale with your needs. We provide competitive pricing without compromising on quality.</p>
+<h3>4. Community Focused</h3>
+<p>By keeping neighborhoods clean and safe, Hyprop contributes to the overall well-being of the communities we serve. Our services also include public awareness campaigns to educate residents and businesses on proper waste disposal methods.</p>
+<h2>How the Process Works</h2>
+<h3>Initial Assessment:</h3>
+<p>We assess your waste collection needs to create a customized plan.</p>
+<h3>Scheduled Pick-Up:</h3>
+<p>Our team collects refuse on the agreed schedule, using modern equipment to ensure efficiency and cleanliness.</p>
+<h3>Transportation to Facilities:</h3>
+<p>Collected waste is transported to licensed treatment and disposal facilities.</p>
+<h3>Eco-Friendly Disposal:</h3>
+<p>Waste is managed responsibly, with recyclable materials diverted to recycling centers and non-recyclable waste processed according to environmental standards.</p>
+        </p>
+        <img src="images/r2.jpg" alt="Environmental Impact">
+    </div>
+	<div class="container">
+    <div class="section">
+		<h2>Types of Waste Collected</h2>
+        <p><li>Household Refuse: General waste from homes, such as food waste, packaging, and other non-recyclables.</p>
+<p><li>Commercial Waste: Waste generated by offices, retail stores, and hospitality businesses.</li></p>
+<p><li>Industrial Waste: Non-hazardous waste produced by manufacturing and production processes.</li></p>
+<p><li>Public Space Waste: Litter and refuse from parks, streets, and public areas.</li></p>
+<p><em>“Keep your surroundings clean and clutter-free with Hyprop’s reliable refuse waste collection services. Contact us today to schedule your pick-up or learn more about our tailored solutions for residential, commercial, and industrial waste management.”</em></p>
+        </p>
+        <img src="images/rok.jpg" alt="Environmental Impact">
+    </div>
+
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/Hypropbw" target="_blank" class="fab fa-facebook" aria-label="Facebook"></a>
+        <a href="https://twitter.com" target="_blank" class="fab fa-twitter" aria-label="Twitter"></a>
+        <a href="https://www.instagram.com/hyprop_pvt_ltd/" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+        <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+    </div>
+</div>
+

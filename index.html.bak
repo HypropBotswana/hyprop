@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyprop Botswana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-45deg);
+            animation: shineEffect 4s infinite linear;
+        }
+
+        @keyframes shineEffect {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 91, 181, 0.9);
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		}
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 91, 181, 0.9);
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+		 body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .image-container {
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .image-container h3,
+        .image-container p {
+            margin: 0;
+            padding: 5px 0;
+            min-height: 40px; /* Uniform height for headings */
+        }
+
+        .image-container p {
+            font-size: 14px;
+            color: #666;
+            min-height: 50px; /* Uniform height for notes */
+        }
+
+        .image-container img {
+            width: 300px; /* Fixed width */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Crop to fit size */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #0073e6;
+            background: #f4f4f9;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #0073e6;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #005bb5, #0073e6);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-section {
+            margin: 40px auto;
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #0073e6, #00c6ff);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-section a:hover {
+            background: linear-gradient(to right, #005bb5, #0073e6);
+        }
+
+        .contact-section p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+		<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyprop Scroll to Top</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* To create scrollable content */
+            background: linear-gradient(135deg, #0073e6, #00c6ff);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ffcc00, #ff6600);
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .scroll-to-top:hover {
+            transform: rotate(360deg) scale(1.2);
+            background: linear-gradient(135deg, #ff6600, #ffcc00);
+        }
+
+        .scroll-to-top i {
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.4s ease;
+        }
+
+        .scroll-to-top:hover i {
+            transform: scale(1.2);
+        }
+
+        .scroll-to-top:active {
+            transform: scale(0.9);
+        }
+
+        @keyframes shapeChange {
+            0% {
+                border-radius: 50%;
+            }
+            50% {
+                border-radius: 20%;
+            }
+            100% {
+                border-radius: 50%;
+            }
+        }
+
+        .scroll-to-top.animate {
+            animation: shapeChange 3s infinite;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hyprop Botswana</h1>
+        <h2>We believe in fostering a cleaner, greener environment.</h2>
+    </header>
+     <nav>
+        <a href="index.html">Home</a>
+        <a href="sewage.html">Sewage Waste Collection</a>
+        <a href="incineration.html">Incineration (Disposal)</a>
+        <a href="refuse.html">Refuse Waste Collection</a>
+    </nav>
+ <div class="container">
+    <div class="section">
+        <h2>Welcome to Hyprop Botswana</h2>
+        <p>
+            Established in 2005 and headquartered in Tati Siding, Botswana, the company has expanded its operations to Namibia, offering a wide range of services to both residential and commercial clients.
+			Hyprop Botswana is a leading waste management company specializing in comprehensive environmental services. Below are some of the services we provide:
+			
+		</p>
+		   <div class="image-row">
+        <div class="image-container">
+            <h3>Sewage Collection and Disposal</h3>
+            <p>Hyprop provides efficient sewage collection and disposal services, ensuring proper sanitation and environmental protection.</p>
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <h3>Refuse Collection</h3>
+            <p>The company offers regular refuse collection services, contributing to cleanerm, healthier communities..</p>
+            <img src="hyp.jpg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <h3>Hazardous Waste Management</h3>
+            <p>Hyprop specializes in the safe handling and disposal of hazardous waste, adhering to strict environmental regulations.</p>
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Our Approach</h2>
+        <p>Hyprop as a socially responsible organization, adopts a proactive approach to giving back to the community. Here's a breakdown of their approach:</p>
+
+   <h3>1. Environmental Stewardship</h3>
+<p>Hyprop is committed to preserving the environment through its waste management solutions, which promote sustainable practices, such as recycling, hazardous waste disposal, and sewage treatment, directly contribute to healthier communities by ensuring cleaner surroundings.</p>
+
+<h3>2. Employment Creation</h3>
+<p>Hyprop supports local economies by creating jobs and providing training opportunities within the waste management sector. They empower local communities by hiring and developing talent from the areas they serve.</p>
+<h3>3. Community Engagement</h3>
+The company actively engages with communities by running awareness campaigns on proper waste disposal and environmental conservation. They partner with local organizations and schools to educate the public on sustainable practices.</p>
+<h3>4. Support for Local Initiatives</h3>
+<p>Hyprop collaborates with community-based initiatives to enhance public welfare, such as contributing to infrastructure development or sanitation projects. They are known for supporting projects that aim to improve living standards in underprivileged areas.</p>
+        </p>
+        <img src="images/hyy.jpg" alt="Advanced Technologies">
+    </div>
+
+    <div class="section">
+        <h2>Giving Back to the Community</h2>
+        <p>At Hyprop, we believe in building more than just a successful business, we believe in building stronger communities. Our commitment to giving back is rooted in our core values of compassion, sustainability, and social responsibility. Through various initiatives, we aim to uplift the lives of those in need and contribute to a brighter future for all.</p>
+
+      <h3>Supporting Vulnerable Communities</h3>
+<p>We actively support underprivileged communities by providing essential resources such as:</p>
+
+<p><li>Food and clean water for families in need.</li></p>
+<p><li>Financial aid and material donations to orphanages, elderly care homes, and shelters.</li></p>
+<p><li>School supplies and educational resources for children to ensure no one is left behind.</li></p>
+<h3>Empowering Through Opportunities</h3>
+<p><li>Hyprop invests in initiatives that create employment opportunities and provide skills training for the unemployed, empowering them to achieve economic independence.</li></p>
+<p><li>We work with local communities to develop programs that improve livelihoods and promote self-sustainability.</li></p>
+<P>
+</P>
+<p><em>“At Hyprop, giving back is not just a responsibility it’s a privilege. By helping those in need, we are paving the way for a more inclusive, equitable, and sustainable society.”<em></p>
+
+
+        </p>
+        <img src="images/fd.jpg" alt="Environmental Impact">
+    </div>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any inquiries or need assistance, feel free to reach out to us!</p>
+            <a href="mailto:projecthyprop@gmail.com">Email Us</a>
+        </div>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/Hypropbw" target="_blank" class="fab fa-facebook" aria-label="Facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter" aria-label="Twitter"></a>
+            <a href="https://www.instagram.com/hyprop_pvt_ltd/" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+        </div>
+		 <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
+            // Show button when user scrolls down
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 200) {
+                    scrollToTopBtn.classList.add("animate");
+                    scrollToTopBtn.style.opacity = "1";
+                    scrollToTopBtn.style.pointerEvents = "all";
+                } else {
+                    scrollToTopBtn.classList.remove("animate");
+                    scrollToTopBtn.style.opacity = "0";
+                    scrollToTopBtn.style.pointerEvents = "none";
+                }
+            });
+
+            // Scroll back to top when clicked
+            scrollToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+  
+    <div class="scroll-to-top">
+        <i>&uarr;</i>
+    </div>
+    </div>
+</body>
+
+</html>
